@@ -85,7 +85,7 @@ task copyImage() {
 
 
 /*
-//Uncomment and try two different ways of setting a new folder
+//Uncomment and try two different ways of setting a new folder. Check where the resulting folder is placed with each.
 def folderTo = "original_folder"
 
 //task chooseFolder() {
