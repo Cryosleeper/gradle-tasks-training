@@ -79,13 +79,18 @@ task copyImage() {
     group "experiments"
     println("Printed on configuration")
     doFirst {
-        println("Printed on execution - first")
+        copy {
+            group "experiments"
+            from "../images/gradle21.jpeg"
+            into "folderFirst"
+            println("Printed on execution - first")
+        }
     }
     doLast {
         copy {
             group "experiments"
             from "../images/gradle21.jpeg"
-            into "new_folder"
+            into "folderLast"
             println("Printed on execution - last")
         }
     }
