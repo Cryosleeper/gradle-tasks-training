@@ -91,6 +91,36 @@ task copyImage() {
     }
 }*/
 
+/*
+//Uncomment and check task dependency
+task copyToFolder1(type: Copy) {
+    group "experiments"
+    from "../images/gradle22.jpeg"
+    into "folder1"
+}
+
+task copyToFolder2(type: Copy) {
+    group "experiments"
+    from "../images/gradle22.jpeg"
+    into "folder2"
+}
+
+task copyImage() {
+    group "experiments"
+    println("Printed on configuration")
+    dependsOn(
+            copyToFolder1,
+            { println("Printed on configuration - dependsOn") }
+    )
+    finalizedBy(
+            copyToFolder2,
+            {
+                println("Printed on configuration - finalized")
+            },
+            {
+                println("Printed on configuration - finalized 2")
+            })
+}*/
 
 /*
 //Uncomment and try two different ways of setting a new folder. Check where the resulting folder is placed with each.
