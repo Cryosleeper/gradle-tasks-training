@@ -44,22 +44,23 @@ dependencies {
 }
 
 //region Gradle Experiments
-
 /*
 //Uncomment, sync and run emptyTask. Observe copy happening
 copy {
     group "experiments"
     from "../images/gradle10.webp"
     into "new_folder"
+    println("Printed on configuration (copy)")
 }
 
 task emptyTask() {
     group "experiments"
+    println("Printed on configuration (emptyTask)")
 }
 */
 
 /*
-//Uncomment, sync and run copyImage. Check the list of tasks
+//Uncomment, sync and run copyImage. Check the list of tasks. Check when the message is printed
 task copyImage(type: Copy) {
     group "experiments"
     from "../images/gradle20.jpeg"
