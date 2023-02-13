@@ -49,7 +49,7 @@ dependencies {
 //Uncomment, sync and run emptyTask. Observe copy happening
 copy {
     group "experiments"
-    from "../images/gradle1.webp"
+    from "../images/gradle10.webp"
     into "new_folder"
 }
 
@@ -62,7 +62,7 @@ task emptyTask() {
 //Uncomment, sync and run copyImage. Check the list of tasks
 task copyImage(type: Copy) {
     group "experiments"
-    from "../images/gradle2.jpeg"
+    from "../images/gradle20.jpeg"
     into "new_folder"
     println("Printed on configuration")
 }*/
@@ -74,7 +74,8 @@ task copyImage() {
     println("Printed on configuration")
     doLast {
         copy {
-            from "../images/gradle2a.jpeg"
+            group "experiments"
+            from "../images/gradle21.jpeg"
             into "new_folder"
             println("Printed on execution")
         }
@@ -101,7 +102,7 @@ def folderTo = "original_folder"
 task runCopy(type: Copy) {
     dependsOn(chooseFolder)
     group "experiments"
-    from "../images/gradle3.jpeg"
+    from "../images/gradle30.jpeg"
     into "${folderTo}"
 }*/
 
@@ -110,7 +111,7 @@ task runCopy(type: Copy) {
 def copyTo(folderTo) {
     copy {
         group "experiments"
-        from "../images/gradle4.jpeg"
+        from "../images/gradle40.jpeg"
         into "${folderTo}"
     }
 }
