@@ -65,7 +65,12 @@ task copyImage(type: Copy) {
     group "experiments"
     from "../images/gradle20.jpeg"
     into "new_folder"
-    println("Printed on configuration")
+    println("Printed on configuration (copyImage)")
+}
+
+task emptyTask() {
+    group "experiments"
+    println("Printed on configuration (emptyTask)")
 }*/
 
 /*
