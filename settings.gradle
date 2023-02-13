@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "GradleApp"
-//rootProject.name = "Gradle Lab" //uncomment and observe how Sync Now runs the initialization
+//rootProject.name = "Gradle Lab" //1. Uncomment and observe how Sync Now runs the initialization
 include ':app'

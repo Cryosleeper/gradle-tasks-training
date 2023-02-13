@@ -45,7 +45,7 @@ dependencies {
 
 //region Gradle Experiments
 /*
-//Uncomment, sync and run emptyTask. Observe copy happening
+//2. Uncomment, sync and run emptyTask. Observe copy happening
 copy {
     group "experiments"
     from "../images/gradle10.webp"
@@ -60,7 +60,7 @@ task emptyTask() {
 */
 
 /*
-//Uncomment, sync and run copyImage. Check the list of tasks. Check when the message is printed
+//3. Uncomment, sync and run copyImage. Check the list of tasks. Check when the message is printed
 task copyImage(type: Copy) {
     group "experiments"
     from "../images/gradle20.jpeg"
@@ -74,7 +74,7 @@ task emptyTask() {
 }*/
 
 /*
-//Uncomment and check what prints when
+//4. Uncomment and check what prints when
 task copyImage() {
     group "experiments"
     println("Printed on configuration")
@@ -97,7 +97,7 @@ task copyImage() {
 }*/
 
 /*
-//Uncomment and check task dependency
+//5. Uncomment and check task dependency
 task copyToFolder1(type: Copy) {
     group "experiments"
     from "../images/gradle22.jpeg"
@@ -128,7 +128,7 @@ task copyImage() {
 }*/
 
 /*
-//Uncomment and try two different ways of setting a new folder. Check where the resulting folder is placed with each.
+//6. Uncomment and try two different ways of setting a new folder. Check where the resulting folder is placed with each.
 def folderTo = "original_folder"
 
 //task chooseFolder() {
@@ -151,7 +151,7 @@ task runCopy(type: Copy) {
 }*/
 
 /*
-//Uncomment and check there's no task for copying without setting a name first
+//7. Uncomment and check there's no task for copying without setting a name first
 def copyTo(folderTo) {
     copy {
         group "experiments"
