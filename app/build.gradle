@@ -1,0 +1,114 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'ai.bryj.mobile.training.gradleapp'
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "ai.bryj.mobile.training.gradleapp"
+        minSdk 23
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
+
+//region Gradle Experiments
+
+/*
+//Uncomment, sync and run emptyTask. Observe copy happening
+task emptyTask() {
+    group "experiments"
+}
+
+copy {
+    from "../images/gradle1.webp"
+    into "new_folder"
+}*/
+
+/*
+//Uncomment, sync and run copyImage. Check the list of tasks
+task copyImage(type: Copy) {
+    group "experiments"
+    from "../images/gradle2.jpeg"
+    into "new_folder"
+}*/
+
+/*
+//Uncomment and try two different ways of setting a new folder
+def folderTo = "original_folder"
+
+//task chooseFolder() {
+//    group "experiments"
+//    folderTo = "different_folder"
+//}
+
+//task chooseFolder() {
+//    group "experiments"
+//    doLast {
+//        folderTo = "different_folder"
+//    }
+//}
+
+task runCopy(type: Copy) {
+    dependsOn(chooseFolder)
+    group "experiments"
+    from "../images/gradle3.jpeg"
+    into "${folderTo}"
+}*/
+
+/*
+//Uncomment and check there's no task for copying without setting a name first
+def copyTo(folderTo) {
+    copy {
+        group "experiments"
+        from "../images/gradle4.jpeg"
+        into "${folderTo}"
+    }
+}
+
+task copyToFolderABC() {
+    group "experiments"
+    doLast {
+        copyTo("ABC")
+    }
+}
+
+task copyToFolderXYZ() {
+    group "experiments"
+    doLast {
+        copyTo("XYZ")
+    }
+}*/
+
+//endregion
