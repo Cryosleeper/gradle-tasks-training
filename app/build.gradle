@@ -48,6 +48,7 @@ dependencies {
 /*
 //Uncomment, sync and run emptyTask. Observe copy happening
 copy {
+    group "experiments"
     from "../images/gradle1.webp"
     into "new_folder"
 }
