@@ -47,14 +47,15 @@ dependencies {
 
 /*
 //Uncomment, sync and run emptyTask. Observe copy happening
-task emptyTask() {
-    group "experiments"
-}
-
 copy {
     from "../images/gradle1.webp"
     into "new_folder"
-}*/
+}
+
+task emptyTask() {
+    group "experiments"
+}
+*/
 
 /*
 //Uncomment, sync and run copyImage. Check the list of tasks
